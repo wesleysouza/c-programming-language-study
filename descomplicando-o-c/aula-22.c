@@ -11,7 +11,7 @@ int main()
 {
 	/* 
 	comando break:
-	interromper a reprtição de quaçquer comando de laço (for, while ou do-while).
+	interromper a reprtição de qualquer comando de laço (for, while ou do-while).
 	*/
 
 	//Forma geral:
