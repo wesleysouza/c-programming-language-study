@@ -11,7 +11,7 @@ int main(){
 
 	/*
 	comando continue:
-	interromper a repetição atual de quaçquer comando de loop (for, whle ou do-while), e passar para a próxima repetição.
+	interromper a repetição atual de qualquer comando de loop (for, whle ou do-while), e passar para a próxima repetição.
 	/*
 
 	//Forma geral
