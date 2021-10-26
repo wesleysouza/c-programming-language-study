@@ -34,7 +34,8 @@ int main(){
 	int X[5][5][5][5];
 	*/
 
-	int cub[5][5][5];
+	int cub[5][5][5]; //125 variáveis
+	//Cuidado com o consumo de memória
 	int i,j,k;
 	//Preenchendo o array de 3 dimensões com zeros
 	//Para cada dimenssão utilizamos um comando de repetição
