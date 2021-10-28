@@ -15,7 +15,7 @@ float multiply(float a, float b){
 	return a * b;
 }
 
-//Função sem parâmetros
+//Função sem parâmetros e sem retorno
 void imprimeMensagem(){
 	printf("Mensagem!");
 }
