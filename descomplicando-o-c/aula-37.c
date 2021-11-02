@@ -8,6 +8,11 @@ Fonte -> https://youtu.be/tbvo4QFyzqQ
 #include <stdlib.h>
 #include <string.h>
 
+struct pessoa{
+	char nome[50], rua[50];
+	int idade, numero;
+};
+
 int main(){
 	//COM STRUCT
 	//Definindo 4 pessoas, se fosse 100?

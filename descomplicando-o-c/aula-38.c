@@ -3,6 +3,11 @@ Notas -> Aula 38 - Aninhamento de Structs
 Fonte -> https://youtu.be/34_5n_NkDYU
 */
 
+//Declaração das bibliotecas
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 //Rua e numero poderiam fazer parte da ESTRUTURA endereço
 struct pessoa{
 	char nome[50], rua[50];

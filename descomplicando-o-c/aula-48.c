@@ -12,7 +12,7 @@ void somaMaisUmPorValor(int n){
 }
 
 void somaMaisUmPorRef(int *n){ //Recebe o endereço de x
-	*n = *n + 1; //Lembrar do * para não ter problemas na execução da função
+	(*n) = (*n) + 1; //Lembrar do * para não ter problemas na execução da função
 	printf("Dentro da função: x = %d\n", x);
 }
 
