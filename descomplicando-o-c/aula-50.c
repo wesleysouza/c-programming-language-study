@@ -32,6 +32,12 @@ int preencheStruct(struct ponto *p){
 	(*p).y = 20;
 }
 
+//Recebendo struct por referência com o operador (->)
+int preencheStructNewOperator(struct ponto *p){
+	p->x = 10; // (->) é uma simplificação de (*p).x
+	p->y = 20;
+}
+
 int main(){
 	/*
 	Quando trabalhamos com estruturas podemos passar para a função:

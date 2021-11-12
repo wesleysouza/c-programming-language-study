@@ -18,6 +18,7 @@ struct ponto addPontoValor()
 
 }
 
+//testado
 int addPontoRef(struct ponto *p)
 {
 	(*p).id = geraId;
@@ -44,6 +45,16 @@ int busca(struct ponto *p, int tam, int id){
 	return -1;
 }
 
+int existeVazio(struct ponto *p, int tam){
+	int i;
+	for (i = 0; i < tam; i++){
+		if(p[i].id < 1){
+			return i; // Retornando uma posição
+		}
+	}
+	return -1; // Retorna -1, não existe posição livre
+}
+
 int imprimeBusca(struct ponto *p, int tam, int id)
 {
 	int posBusca = busca(p, tam, id);
@@ -64,7 +75,8 @@ int main(){
 	addPontoRef(&vponto[0]);
 	addPontoRef(&vponto[1]);
 	addPontoRef(&vponto[2]);
-	addPontoRef(&vponto[3]);
+	//Testando função que encontra posição vazia
+	//addPontoRef(&vponto[3]);
 	addPontoRef(&vponto[4]);
 
 	//addPontoRef(&vponto[0]);
@@ -72,13 +84,26 @@ int main(){
 	imprimePonto(vponto[0]);
 	imprimePonto(vponto[1]);
 	imprimePonto(vponto[2]);
-	imprimePonto(vponto[3]);
+	//imprimePonto(vponto[3]);
 	imprimePonto(vponto[4]);
 
 	printf("Busca\n");
 	int pos = busca(vponto, 5, 5);
 	//imprimePonto(vponto[pos]);
 
-	imprimeBusca(vponto, 5, 8);
+	//imprimeBusca(vponto, 5, 8);
+
+	int v = existeVazio(vponto, 5);
+
+	printf("POSIÇÃO LIVRE \n");
+
+	if(v >= 0){
+		printf("Vazio na posição %d\n", v);
+	}
+	else{
+		printf("Não existe posição vazia \n");
+	}
+
 	
 }
+
