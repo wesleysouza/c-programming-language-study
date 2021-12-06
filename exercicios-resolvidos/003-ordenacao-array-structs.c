@@ -1,39 +1,81 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-struct notas{
-	float nota1, nota2, nota3;
-};
 
 struct aluno
 {
-	int matricula;
+	int mat;
 	char nome[30];
-	struct notas not;
 };
 
-void insertionSortMatricula(struct aluno *v, int n){
-	int i, j; 
+void bubbleSortMat(struct aluno *v, int n){
+	int i, continua, fim = n;
 	struct aluno aux;
-	for(i = 0; i < n; i++){
-		aux = v[i];
-		//Move os números maiores pra frente e insere na posição vaga
-		for(j = i; (j > 0) && (aux.matricula < v[j - 1].matricula); j--){
-			v[j] = v[j - 1];
+	do{
+		continua = 0;
+		for(i = 0; i < fim-1; i++){
+			if(v[i].mat > v[i+1].mat){ // Comparando os adjacentes
+				//Troca dos valores
+				aux = v[i];
+				v[i] = v[i + 1];
+				v[i + 1] = aux;
+				continua = i; // Houve trocas, então continua
+			}
 		}
-		v[j] = aux;
+		fim--;
+	}while(continua != 0);
+}
+
+void bubbleSortNome(struct aluno *v, int n){
+	int i, continua, fim = n;
+	struct aluno aux;
+	do{
+		continua = 0;
+		for(i = 0; i < fim-1; i++){
+			if(strcmp(v[i].nome,v[i+1].nome) > 0){ // Comparando os adjacentes
+				//Troca dos valores
+				aux = v[i];
+				v[i] = v[i + 1];
+				v[i + 1] = aux;
+				continua = i; // Houve trocas, então continua
+			}
+		}
+		fim--;
+	}while(continua != 0);
+}
+
+
+void imprimeArrayStructs(struct aluno *p, int tam){
+	int i;
+	for(i = 0; i < tam; i++){
+		printf("Matricula: %d - Nome %s\n", p[i].mat, p[i].nome);
 	}
 }
 
-void insertionSortNome(struct aluno *v, int n){
-	int i, j; 
-	struct aluno aux;
-	for(i = 0; i < n; i++){
-		aux = v[i];
-		//Move os números maiores pra frente e insere na posição vaga
-		for(j = i; (j > 0) && (aux.nome < v[j - 1].nome); j--){
-			v[j] = v[j - 1];
-		}
-		v[j] = aux;
-	}
+int main(){
+	
+	struct aluno p[4] = {
+		55, "Ziraldo",
+		50, "Maria",
+		30, "Bruno",
+		12, "Joao",
+	};
+
+	imprimeArrayStructs(p, 4);
+
+	printf("Ord Mat\n");
+
+	bubbleSortMat(p, 4);
+
+	imprimeArrayStructs(p, 4);
+
+	printf("Ord Nome\n");
+
+	bubbleSortNome(p, 4);
+
+	imprimeArrayStructs(p, 4);
+
+	return 0;
 }
+
+
+
+
