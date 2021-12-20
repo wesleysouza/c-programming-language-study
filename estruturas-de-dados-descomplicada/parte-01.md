@@ -4,21 +4,21 @@ Fonte: https://youtu.be/bryesHll0vY
 
 Tipo de dado: define o ocnjunto de valores (domínio que uma variável pode assumir).
 
-ˋˋˋc
+```c
 Ex.: int
 ... -2, -1, 0, +1, +2, ...
-ˋˋˋ
+```
 
 Estruturas de dados: trata-se de um relacionamento lógico entre tipos de dados.
 
 Ex.: Uma struct
 
-ˋˋˋc
+```c
 struct pessoa{
     char nome[30];
     int idade;
 };
-ˋˋˋ
+```
 
 Obs.: Os três juntos tem um significado. 
 
@@ -41,9 +41,9 @@ Vantagens:
 
 ### Exemplo de TAD: arquivos em C
 
-ˋˋˋc
+```c
 FILE *f;
-ˋˋˋ
+```
 
 Os dados de "f" somente podem ser acessados pelas funções e manipulação do tipo:
 - fopen()
