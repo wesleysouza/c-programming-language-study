@@ -1,5 +1,5 @@
 /*
-Notas -> Aula 70 - Arquivos - Parte 5 - fgetc
+Notas -> Aula 78 - Arquivos - fscanf()
 Fonte -> https://youtu.be/FwW2T3jGvdg
 */
 
