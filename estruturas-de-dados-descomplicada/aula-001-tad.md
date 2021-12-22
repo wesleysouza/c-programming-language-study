@@ -1,7 +1,5 @@
 # [ED] Aula 01 - TAD (Tipo Abstrato de Dado)
 
-Fonte: https://youtu.be/bryesHll0vY
-
 Tipo de dado: define o ocnjunto de valores (domínio que uma variável pode assumir).
 
 ```c
@@ -54,3 +52,5 @@ Os dados de "f" somente podem ser acessados pelas funções e manipulação do t
 - e etc.
 
 Obs.: Nunca é permitido o acesso direto, o acesso é somente pelas função de manipulação definidas.
+
+Fonte: https://youtu.be/bryesHll0vY
