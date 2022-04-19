@@ -27,6 +27,7 @@ int soma_imprime_valor(int *n){
 int preencheStruct(struct ponto *p){
 	//Precisa do parênteses se não o compilador vai se atrapalhar, ele vai pensar que vc ta acessando *(p.x)
 	(*p).x = 10; // CORRETO
+	p->x = 10;
 	//*p.y = 10; //ERRADO!
 	//*(p.y) = 10; //ERRADO!
 	(*p).y = 20;
